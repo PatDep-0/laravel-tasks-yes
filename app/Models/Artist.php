@@ -12,11 +12,16 @@ class Artist extends Model
     protected $primaryKey = 'artistID';
     public $incrementing = false;
     protected $keyType = 'string';
-    protected $fillable = ['artistID', 'artistName'];
+    protected $fillable = ['artistID', 'artistName', 'artistImage'];   
 
     public function albums()
     {
         return $this->hasMany(Album::class, 'artistID', 'artistID');
+    }
+
+    public function getArtistImageAttribute($value)
+    {
+        return asset($value ?: 'images/default.jpg');
     }
 
     public function songs()
