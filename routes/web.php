@@ -1,3 +1,7 @@
+use App\Http\Controllers\ArtistController;
+
+Route::get('/artists/search', [ArtistController::class, 'search'])->name('artists.search');
+Route::get('/artists/{artistID}', [ArtistController::class, 'show'])->name('artists.show');
 <?php
 
 use Illuminate\Support\Facades\Route;

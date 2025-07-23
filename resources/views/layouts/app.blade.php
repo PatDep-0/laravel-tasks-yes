@@ -24,6 +24,14 @@
             margin-right: 6px;
         }
     </style>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body { background: #f8fafc; }
+        .container { max-width: 700px; margin-top: 40px; }
+        .search-box { background: #fff; padding: 2rem; border-radius: 1rem; box-shadow: 0 2px 8px #0001; }
+        .artist-list li { margin-bottom: 0.5rem; }
+        .back-link { margin-top: 2rem; display: inline-block; }
+    </style>
 </head>
 <body id="app-layout">
     <nav class="navbar navbar-default">
@@ -39,11 +47,14 @@
         </div>
     </nav>
 
-    @yield('content')
+    <div class="container">
+        @yield('content')
+    </div>
 
     <!-- JavaScripts -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"></script>
     {{-- <script src="{{ elixir('js/app.js') }}"></script> --}}
 </body>
+</html>
 </html>
