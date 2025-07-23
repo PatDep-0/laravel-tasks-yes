@@ -1,6 +1,16 @@
 @extends('layouts.app')
 
 @section('content')
+<style>
+    body {
+        background-image: url('{{ asset('images/bg.jpg') }}');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        min-height: 100vh;
+    }
+</style>
+
 <div class="search-box">
     <h1 class="mb-4 text-center">Search Artists</h1>
     <form method="GET" action="{{ route('artists.search') }}" class="d-flex mb-4">
