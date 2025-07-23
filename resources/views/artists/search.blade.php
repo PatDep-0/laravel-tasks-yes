@@ -11,11 +11,13 @@
         <ul class="list-group artist-list">
             @foreach($artists as $artist)
                 <li class="list-group-item d-flex align-items-center">
-                <img src="{{ asset($artist->artistPhoto) }}" alt="{{ $artist->artistName }}" width="60" height="60" class="me-3 rounded-circle" style="object-fit: cover;">
-                <a href="{{ route('artists.show', $artist->artistID) }}" class="text-decoration-none">
-                    {{ $artist->artistName }}
-                </a>
-</li>
+                    <img src="{{ asset($artist->artistPhoto) }}" alt="{{ $artist->artistName }}" width="60" height="60" class="me-3 rounded-circle" style="object-fit: cover;">
+                    <div>
+                        <a href="{{ route('artists.show', $artist->artistID) }}" class="fw-bold text-decoration-none">
+                            {{ $artist->artistName }}
+                        </a>
+                    </div>
+                </li>
             @endforeach
         </ul>
     @elseif(isset($query))
