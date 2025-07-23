@@ -5,6 +5,7 @@
     <h1 class="mb-3">{{ $artist->artistName }}</h1>
     @if($artist->artistImage)
         <img src="{{ asset($artist->artistImage) }}" alt="{{ $artist->artistName }}" class="img-fluid mb-3" style="max-width: 200px;">
+    @endif
     <h4>Songs</h4>
     <ul class="list-group mb-4">
         @forelse($artist->songs as $song)
