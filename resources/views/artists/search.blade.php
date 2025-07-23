@@ -11,7 +11,7 @@
         <ul class="list-group artist-list">
             @foreach($artists as $artist)
                 <li class="list-group-item d-flex align-items-center">
-                    <img src="{{ asset($artist->artistPhoto) }}" alt="{{ $artist->artistName }}" width="60" height="60" class="me-3 rounded-circle" style="object-fit: cover;">
+                    <img src="{{ asset($artist->artistImage) }}" alt="{{ $artist->artistName }}" width="60" height="60" class="me-3 rounded-circle" style="object-fit: cover;">
                     <div>
                         <a href="{{ route('artists.show', $artist->artistID) }}" class="fw-bold text-decoration-none">
                             {{ $artist->artistName }}
