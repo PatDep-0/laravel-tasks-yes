@@ -10,9 +10,12 @@
     @if(isset($artists) && count($artists) > 0)
         <ul class="list-group artist-list">
             @foreach($artists as $artist)
-                <li class="list-group-item d-flex justify-content-between align-items-center">
-                    <a href="{{ route('artists.show', $artist->artistID) }}">{{ $artist->artistName }}</a>
-                </li>
+                <li class="list-group-item d-flex align-items-center">
+                <img src="{{ asset($artist->artistPhoto) }}" alt="{{ $artist->artistName }}" width="60" height="60" class="me-3 rounded-circle" style="object-fit: cover;">
+                <a href="{{ route('artists.show', $artist->artistID) }}" class="text-decoration-none">
+                    {{ $artist->artistName }}
+                </a>
+</li>
             @endforeach
         </ul>
     @elseif(isset($query))

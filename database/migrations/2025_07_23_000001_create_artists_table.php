@@ -10,6 +10,7 @@ return new class extends Migration {
         Schema::create('artists', function (Blueprint $table) {
             $table->string('artistID')->primary();
             $table->string('artistName');
+            $table->string(('artistImage'))->nullable();
         });
     }
 

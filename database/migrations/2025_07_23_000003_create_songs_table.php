@@ -11,9 +11,7 @@ return new class extends Migration {
             $table->string('songID')->primary();
             $table->string('songTitle');
             $table->string('artistID');
-            $table->string('albumID')->nullable();
             $table->foreign('artistID')->references('artistID')->on('artists')->onDelete('cascade');
-            $table->foreign('albumID')->references('albumID')->on('albums')->onDelete('cascade');
         });
     }
 
